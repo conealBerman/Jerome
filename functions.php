@@ -35,6 +35,21 @@
 // CUSTOM POST TYPE PEOPLE 
 	include(get_template_directory() . '/machines/functions/custom_post_people.php');
 
+// CUSTOM POST TYPE SERVICES 
+	include(get_template_directory() . '/machines/functions/custom_post_services.php');
+
+// CUSTOM POST TYPE PROJECTS 
+	include(get_template_directory() . '/machines/functions/custom_post_projects.php');
+
+// CUSTOM POST TYPE ARTICLES 
+	include(get_template_directory() . '/machines/functions/custom_post_articles.php');
+
+// CUSTOM POST TYPE SLIDES 
+	include(get_template_directory() . '/machines/functions/custom_post_slides.php');
+
+// CUSTOM POST TYPE INNER SLIDES
+	include(get_template_directory() . '/machines/functions/custom_post_inner_slides.php');
+
 // GENERATE META BOXES
 	function generateMetaBoxes($arrayData){
 		foreach ($arrayData as $value) {

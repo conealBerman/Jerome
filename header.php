@@ -7,17 +7,15 @@
 		<?php wp_head(); ?>
 		<link rel="stylesheet" href="<?php bloginfo( stylesheet_url ); ?>"/>
 
-<!-- 		
 		<link rel="stylesheet" type="text/css" href="<?php echo PAGEDIR; ?>/styles/styles.min.css">
- -->
-
+ 
 		<link rel="stylesheet" type="text/css" href="<?php echo PAGEDIR; ?>/machines/libraries/magnific/magnific.css">
 
 
 
-		<link rel="stylesheet" type="text/less" href="<?php echo PAGEDIR; ?>/styles/styles.less"> 
+<!-- 		<link rel="stylesheet" type="text/less" href="<?php echo PAGEDIR; ?>/styles/styles.less"> 
 		<script type="text/javascript" src="<?php echo PAGEDIR; ?>/machines/libraries/lessjs/less-1.4.1.min.js"></script>
-
+ -->
 		<script type="text/javascript" src="<?php echo PAGEDIR; ?>/machines/libraries/modernizr/modernizr.js"></script>
 		<script type="text/javascript" src="<?php echo PAGEDIR; ?>/machines/libraries/backstretch/jquery.backstretch.min.js"></script>
 		<script type="text/javascript" src="<?php echo PAGEDIR; ?>/machines/libraries/underscore/underscore-min.js"></script>
@@ -36,12 +34,20 @@
 			generatePagesJSON(get_the_ID());
 			populateJavascript(get_post_field('post_content', get_the_ID()), 'post');
 			listPeople('json');
+			listServices('json');
+			listProjects('json');
+			listArticles('json');
+			listSlides('json');
+			listInnerSlides('json');
 		?>
 		<div class="knockout"></div>
 		<header>
 			<div class="headerWrapper">
 				<div class="headerSticky">
 					<div class="logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo PAGEDIR; ?>/images/graphics/logo.png" alt=""></a></div>
+					<div class="mobile">
+						<a href="#">&#9776;</a>
+					</div>
 					<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
 				</div>
 			</div>
